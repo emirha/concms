@@ -19,6 +19,12 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+        $test = new Test(1);
+//        $test->name = 'sd1111';
+//        $test->save();
+
+        $test->delete();
+
 		$this->load->view('welcome_message');
 	}
 }
