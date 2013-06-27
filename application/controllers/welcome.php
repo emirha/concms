@@ -19,11 +19,18 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-        $test = new Test(1);
+//        $test = new Test(1);
 //        $test->name = 'sd1111';
 //        $test->save();
 
-        $test->delete();
+//        $test->delete();
+
+//        $this->load->model('ion_auth');
+//        $this->ion_auth->register('emir','emir','emir@conxsys.nl');
+
+
+        $ion = new Ion_auth_model();
+        var_dump($ion->register('emir','emir','emir@conxsys.nl'));
 
 		$this->load->view('welcome_message');
 	}
